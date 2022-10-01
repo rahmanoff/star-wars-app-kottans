@@ -1,1 +1,1 @@
-## Star Wars App by kottans video
+## Star Wars App by Kottans video
