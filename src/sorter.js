@@ -17,7 +17,7 @@ export const sortPeoples = peoples => {
     const sliced = peoples.slice();
     const runSorting = (a, b) => a.mass - b.mass;
 
-    if (state.sortMassBy === 'descending') {
+    if (state.sortMassBy === 'ascending') {
         sliced.sort(runSorting)
     } else {
         sliced.sort((a, b) => runSorting(b, a));

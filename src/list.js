@@ -3,7 +3,7 @@ const formatDate = stringDate => {
     return new Intl.DateTimeFormat('en-US').format(date);
 };
 
-const makePersonHtml = ({ name, mass, created, gender }) => {
+const makePersonHtml = ({ name, mass, created, gender, starships }) => {
     const li = document.createElement('li');
     li.classList.add('peoples-list');
     // li.className = 'peoples-list';
@@ -12,6 +12,7 @@ const makePersonHtml = ({ name, mass, created, gender }) => {
         <h2>Name: ${name};</h2>
         <p>Mass: ${mass};</p>
         <p>Gender: ${gender};</p>
+        <p>Starships: ${starships.map(({ name }) => name).join(', ')}</p>
         <p>Date: ${formatDate(created)};</p>
     `;
     return li;
