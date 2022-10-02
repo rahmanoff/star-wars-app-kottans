@@ -1,7 +1,7 @@
 import { fetchPeople } from './src/api.js';
 import { makePeoplesList } from './src/list.js';
 
-const root = document.getElementById('i-am-root');
+const root = document.querySelector('.wrapper');
 
 const start = () => {
     fetchPeople().then(peoples => {

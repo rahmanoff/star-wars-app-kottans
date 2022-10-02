@@ -10,7 +10,19 @@
 </head>
 
 <body>
-    <div class="root" id="i-am-root"></div>
+    <div class="root" id="i-am-root">
+        <h1>STAR WARS COOLEST LIST</h1>
+        <div class="wrapper">
+            <form id="filters">
+                <fieldset>
+                    <label for="mass-descending">Descending</label>
+                    <input id="mass-descending" name="mass" type="radio" data-order="descending">
+                    <label for="mass-ascending">Ascending</label>
+                    <input id="mass-ascending" name="mass" type="radio" data-order="ascending">
+                </fieldset>
+            </form>
+        </div>
+    </div>
     <script type="module" src="./main.js"></script>
 </body>
 

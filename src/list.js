@@ -5,11 +5,13 @@ const formatDate = stringDate => {
 
 const makePersonHtml = person => {
     const li = document.createElement('li');
+    li.classList.add('peoples-list');
+    // li.className = 'peoples-list';
 
     li.innerHTML = `
-        <h2>Name:${person.name};</h2>
-        <p>Mass:${person.mass};</p>
-        <p>Date:${formatDate(person.created)};</p>
+        <h2>Name: ${person.name};</h2>
+        <p>Mass: ${person.mass};</p>
+        <p>Date: ${formatDate(person.created)};</p>
     `;
     return li;
 };
