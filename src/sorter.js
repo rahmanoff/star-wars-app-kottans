@@ -9,15 +9,15 @@ export const sortPeoples = peoples => { };
 export const filterPeoples = peoples => { };
 
 const formListener = ({ currentTarget }) => {
+    const selectedName = Array.from(currentTarget.elements.name).find(({ checked }) => checked);
     const selectedMass = Array.from(currentTarget.elements.mass).find(({ checked }) => checked);
+
+    state.sortNameBy = selectedName.dataset.order;
     state.sortMassBy = selectedMass.dataset.order;
-    console.log(state);
 };
 
-const init = initData => {
+export default initData => {
     peoples = initData;
 
     return formListener;
-}
-
-export default init;
+};
