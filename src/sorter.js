@@ -1,19 +1,25 @@
 let peoples = [];
 
 const state = {
-    sortMassBy: 'descending',
     sortNameBy: 'descending',
+    sortMassBy: 'descending',
+    filterGenderBy: 'all',
+};
+
+const getDatasetValue = (elements, key) => {
+    const checked = Array.from(elements).find(({ checked }) => checked);
+
+    return checked.dataset[key];
 };
 
 export const sortPeoples = peoples => { };
 export const filterPeoples = peoples => { };
 
 const formListener = ({ currentTarget }) => {
-    const selectedName = Array.from(currentTarget.elements.name).find(({ checked }) => checked);
-    const selectedMass = Array.from(currentTarget.elements.mass).find(({ checked }) => checked);
-
-    state.sortNameBy = selectedName.dataset.order;
-    state.sortMassBy = selectedMass.dataset.order;
+    const selectedName = getDatasetValue(currentTarget.elements.name, 'order');
+    const selectedMass = getDatasetValue(currentTarget.elements.mass, 'order');
+    const selectedGender = getDatasetValue(currentTarget.elements.gender, 'gender');
+    console.log({ selectedName, selectedMass, selectedGender });
 };
 
 export default initData => {
