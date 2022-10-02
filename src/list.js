@@ -3,15 +3,16 @@ const formatDate = stringDate => {
     return new Intl.DateTimeFormat('en-US').format(date);
 };
 
-const makePersonHtml = person => {
+const makePersonHtml = ({ name, mass, created, gender }) => {
     const li = document.createElement('li');
     li.classList.add('peoples-list');
     // li.className = 'peoples-list';
 
     li.innerHTML = `
-        <h2>Name: ${person.name};</h2>
-        <p>Mass: ${person.mass};</p>
-        <p>Date: ${formatDate(person.created)};</p>
+        <h2>Name: ${name};</h2>
+        <p>Mass: ${mass};</p>
+        <p>Gender: ${gender};</p>
+        <p>Date: ${formatDate(created)};</p>
     `;
     return li;
 };
