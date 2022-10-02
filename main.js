@@ -3,15 +3,21 @@ import { makePeoplesList } from './src/list.js';
 
 import makeSorter from './src/sorter.js';
 
-const root = document.querySelector('.wrapper');
+const wrapper = document.querySelector('.wrapper');
 const form = document.querySelector('.filters');
+
+const drawPeoples = peoples => {
+    const peoplesList = makePeoplesList(peoples);
+
+    wrapper.innerHTML = '';
+    wrapper.append(peoplesList);
+};
 
 const start = () => {
     fetchPeople().then(peoples => {
-        const peoplesList = makePeoplesList(peoples);
-        root.append(peoplesList);
+        drawPeoples(peoples);
 
-        const handleChange = makeSorter(peoples);
+        const handleChange = makeSorter(peoples, drawPeoples);
         form.addEventListener('change', handleChange);
     });
 };

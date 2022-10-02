@@ -1,4 +1,5 @@
 let peoples = [];
+let drawResult = null;
 
 const state = {
     sortNameBy: 'descending',
@@ -39,15 +40,15 @@ const formListener = ({ currentTarget }) => {
     state.sortMassBy = selectedMass;
     state.filterGenderBy = selectedGender;
 
-    console.log({ peoples });
-
     const sorted = sortPeoples(peoples);
     const filtered = filterPeoples(sorted);
-    console.log({ filtered });
+
+    drawResult(filtered);
 };
 
-export default initData => {
+export default (initData, drawer) => {
     peoples = initData;
+    drawResult = drawer;
 
     return formListener;
 };

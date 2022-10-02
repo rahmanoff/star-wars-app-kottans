@@ -12,32 +12,31 @@
 <body>
     <div class="root" id="i-am-root">
         <h1>STAR WARS COOLEST LIST</h1>
-        <div class="wrapper">
-            <form class="filters">
-                <fieldset>
-                    <label for="name-descending">Name Descending</label>
-                    <input id="name-descending" name="name" type="radio" data-order="descending" checked>
-                    <label for="name-ascending">Name Ascending</label>
-                    <input id="name-ascending" name="name" type="radio" data-order="ascending">
-                </fieldset>
-                <fieldset>
-                    <label for="mass-descending">Mass Descending</label>
-                    <input id="mass-descending" name="mass" type="radio" data-order="descending" checked>
-                    <label for="mass-ascending">Mass Ascending</label>
-                    <input id="mass-ascending" name="mass" type="radio" data-order="ascending">
-                </fieldset>
-                <fieldset>
-                    <label for="all-genders">All genders</label>
-                    <input id="all-genders" name="gender" type="radio" data-gender="all" checked>
-                    <label for="females">Females</label>
-                    <input id="females" name="gender" type="radio" data-gender="female">
-                    <label for="males">Males</label>
-                    <input id="males" name="gender" type="radio" data-gender="male">
-                    <label for="droid">Droid</label>
-                    <input id="droid" name="gender" type="radio" data-gender="n/a">
-                </fieldset>
-            </form>
-        </div>
+        <form class="filters">
+            <fieldset>
+                <label for="name-descending">Name Descending</label>
+                <input id="name-descending" name="name" type="radio" data-order="descending" checked>
+                <label for="name-ascending">Name Ascending</label>
+                <input id="name-ascending" name="name" type="radio" data-order="ascending">
+            </fieldset>
+            <fieldset>
+                <label for="mass-descending">Mass Descending</label>
+                <input id="mass-descending" name="mass" type="radio" data-order="descending" checked>
+                <label for="mass-ascending">Mass Ascending</label>
+                <input id="mass-ascending" name="mass" type="radio" data-order="ascending">
+            </fieldset>
+            <fieldset>
+                <label for="all-genders">All genders</label>
+                <input id="all-genders" name="gender" type="radio" data-gender="all" checked>
+                <label for="females">Females</label>
+                <input id="females" name="gender" type="radio" data-gender="female">
+                <label for="males">Males</label>
+                <input id="males" name="gender" type="radio" data-gender="male">
+                <label for="droid">Droid</label>
+                <input id="droid" name="gender" type="radio" data-gender="n/a">
+            </fieldset>
+        </form>
+        <div class="wrapper"></div>
     </div>
     <script type="module" src="./main.js"></script>
 </body>
