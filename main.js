@@ -11,7 +11,7 @@ const start = () => {
         const peoplesList = makePeoplesList(peoples);
         root.append(peoplesList);
 
-        const handleChange = makeSorter(peoplesList);
+        const handleChange = makeSorter(peoples);
         form.addEventListener('change', handleChange);
     });
 };
